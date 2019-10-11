@@ -1,0 +1,38 @@
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    
+<head>
+    <title>Kailin INF1339 Project 2</title>
+</head>
+    
+<style>
+    body{text-align:center}
+    .test_class {font: 15px arial, sans-serif;
+                    text-align: center;
+                    color: blue}
+</style>
+    
+<script>        
+    var url = "https//api.nytimes.com/svc/search/v2/articlesearch.json?q=rainbow&api-key=KbsBNk0pFCq3zozAL05sbZNcaGOZvMyT";
+    var articleCount = 0;
+    
+    function setup() {
+        noCanvas();
+        loadJSON(url, gotData);
+    }
+    
+    //gotDATA for now just announces itself 
+    function gotData(data) {
+        alert("FUNCTION GOTDATA WAS ACTIVATED")
+    }
+</script>
+    
+<body>
+<h3>API Project Iteration 1</h3>
+<p id="sentinel" class="test_class">New York Times API: Articles from all about rainbows</p>
+<button type="button" onclick="gotData()">GotData </button>
+    
+</body>
+    
+</html>
+
